@@ -28,11 +28,7 @@ describe("DOS attack", function() {
         let tx2 = await attackContract.attack({
             value:ethers.utils.parseEther("5"),
         });
-
-        new Promise ( async () => 
-            await tx2.wait()
-        ).catch(e => console.log(e));
-
+        await tx2.wait()
 
         let tx3 = await targetContract.connect(caller2).bidding({
             value: ethers.utils.parseEther("10"),
