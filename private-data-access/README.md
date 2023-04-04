@@ -1,13 +1,10 @@
-# Sample Hardhat Project
+# Private data attack
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+There doesn't exist real private variables on blockchain, even if we can use access control modifiers like private,internal, hackers still can access these data by hacking the memory slot allocated by solidity.
 
 Try running some of the following tasks:
 
 ```shell
-npx hardhat help
+npm install
 npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
 ```
